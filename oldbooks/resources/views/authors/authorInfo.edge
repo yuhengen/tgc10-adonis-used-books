@@ -1,0 +1,12 @@
+@layout('base')
+
+@section('title')
+{{author.firstname}} {{author.lastname}} Information
+@endsection
+
+@section('content')
+  <h1>{{author.firstname}} {{author.lastname}}</h1>
+  <h3>{{author.date}}</h3>
+@endsection
+
+@endlayout

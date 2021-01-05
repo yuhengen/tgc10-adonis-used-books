@@ -18,4 +18,10 @@ const Route = use('Route')
 
 Route.on('/').render('welcome')
 Route.get('books/', 'BookController.index')
+Route.get('books/create', 'BookController.create')
 Route.get('books/:book_id', 'BookController.show').as('show_book')
+
+Route.get('authors/', 'AuthorController.index')
+Route.get('authors/create', 'AuthorController.create')
+Route.post('authors/create', 'AuthorController.processCreate')
+Route.get('authors/:author_id', 'AuthorController.authorInfo').as('author_info')
